@@ -14,6 +14,7 @@ Funcionalidades mínimas:
 
 Todos os projetos deverão possuir os itens abaixo.
 
+
 ### 1. Tela inicial
 
 - Nome do sistema;
