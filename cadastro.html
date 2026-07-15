@@ -2,32 +2,87 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="cadastro.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cadastro - FixHub</title>
+
+<link rel="stylesheet" href="cadastro.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
-    <div class="caixa-cadastro">
-        <h2>Criar Conta</h2>
-        <form action="#" method="POST">
-            <div class="campo">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-            <div class="campo">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="campo">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
+
+<header>
+
+<h1>Cadastro de Usuários</h1>
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Voltar
+</a>
+
+</header>
+
+<div class="container">
+
+<div class="formulario">
+
+<input type="hidden" id="indice">
+
+<label>Nome</label>
+<input type="text" id="nome">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Senha</label>
+<input type="password" id="senha">
+
+<button onclick="salvarUsuario()">
+<i class="fa-solid fa-floppy-disk"></i>
+Salvar
+</button>
+
+</div>
+
+<div class="lista">
+
+<h2>Usuários</h2>
+
+<input
+type="text"
+id="pesquisa"
+placeholder="Pesquisar..."
+onkeyup="pesquisar()">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nome</th>
+<th>Email</th>
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabelaUsuarios">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="cadastro.js"></script>
 
 </body>
-
 </html>

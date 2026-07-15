@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamadas</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chamados - FixHub</title>
+
+<link rel="stylesheet" href="chamadas.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
-    
+
+<header>
+
+<h1>Controle de Chamados</h1>
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Início
+</a>
+
+</header>
+
+<div class="container">
+
+<div class="formulario">
+
+<input type="hidden" id="indice">
+
+<label>Título</label>
+
+<input type="text" id="titulo">
+
+<label>Descrição</label>
+
+<textarea id="descricao"></textarea>
+
+<label>Prioridade</label>
+
+<select id="prioridade">
+
+<option>Baixa</option>
+<option>Média</option>
+<option>Alta</option>
+
+</select>
+
+<label>Status</label>
+
+<select id="status">
+
+<option>Aberto</option>
+<option>Em andamento</option>
+<option>Finalizado</option>
+
+</select>
+
+<button onclick="salvarChamado()">
+
+<i class="fa-solid fa-plus"></i>
+
+Salvar Chamado
+
+</button>
+
+</div>
+
+<div class="lista">
+
+<h2>Chamados</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Título</th>
+<th>Prioridade</th>
+<th>Status</th>
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabelaChamados">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="chamadas.js"></script>
+
 </body>
+
 </html>

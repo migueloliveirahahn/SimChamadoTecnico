@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista De Chamadas</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lista de Chamados</title>
+
+<link rel="stylesheet" href="listaChamadas.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
-    
+
+<header>
+
+<h1>Lista de Chamados</h1>
+
+<a href="index.html">
+<i class="fa-solid fa-house"></i> Início
+</a>
+
+</header>
+
+<div class="container">
+
+<div class="filtros">
+
+<input
+type="text"
+id="pesquisa"
+placeholder="Pesquisar pelo título..."
+onkeyup="listarChamados()">
+
+<select id="filtroStatus" onchange="listarChamados()">
+
+<option value="">Todos os Status</option>
+<option>Aberto</option>
+<option>Em andamento</option>
+<option>Finalizado</option>
+
+</select>
+
+<select id="filtroPrioridade" onchange="listarChamados()">
+
+<option value="">Todas as Prioridades</option>
+<option>Alta</option>
+<option>Média</option>
+<option>Baixa</option>
+
+</select>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Título</th>
+<th>Descrição</th>
+<th>Prioridade</th>
+<th>Status</th>
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaChamados">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="listaChamadas.js"></script>
+
 </body>
+
 </html>
